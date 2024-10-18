@@ -6,4 +6,9 @@
     </style>
 
     <style name="Theme.Tips_Calculate" parent="Base.Theme.Tips_Calculate" />
+
+    <style name="Title" parent= "Widget.AppCompat.TextView">
+        <item name="android:textSize"> 42sp </item>
+        <item name="android:textStyle"> bold </item>
+    </style>
 </resources>
