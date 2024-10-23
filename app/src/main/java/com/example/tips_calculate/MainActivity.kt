@@ -7,6 +7,7 @@ import android.widget.RadioButton
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.tips_calculate.databinding.ActivityMainBinding
@@ -19,40 +20,18 @@ class MainActivity : AppCompatActivity() {
 
         override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
+            binding = ActivityMainBinding.inflate(layoutInflater)
             setContentView(binding.root)
-
-            var percentage: Int = 0
-            binding.rb10.setOnCheckedChangeListener { _, isChecked ->
-                if (isChecked){
-                    percentage = 10
-                }
-            }
-
-            binding.rb15.setOnCheckedChangeListener { _, isChecked ->
-                if (isChecked){
-                    percentage = 15
-                }
-            }
-
-            binding.rb20.setOnCheckedChangeListener { _, isChecked ->
-                if (isChecked){
-                    percentage = 20
-                }
-            }
-
-            binding.btnClean.setOnClickListener {
-                binding.Price.setText("")
-                binding.Numberp.setText("")
-                //binding.tvresult.setText("")
-                binding.rb10.isChecked = false
-                binding.rb15.isChecked = false
-                binding.rb20.isChecked = false
-            }
 
         binding.btnCalculate.setOnClickListener {
             val totalaccount = binding.Price.text
             val totalpeople = binding.Numberp.text
+            val percentage = binding.tvPercentage.text
+            binding.Numberp.setText("")
+            binding.tvPercentage.setText("")
+            binding.Price.setText("")
 
 
             if (totalaccount?.isEmpty() == true || totalpeople?.isEmpty() == true) {
@@ -63,8 +42,9 @@ class MainActivity : AppCompatActivity() {
 
                 val totalac: Float = totalaccount.toString().toFloat()
                 val totalp : Float = totalpeople.toString().toFloat()
+                val percen : Float = percentage.toString().toFloat()
                 val account = totalac / totalp
-                val tips = account * percentage / 100
+                val tips = account * percen / 100
                 val tot = tips + account
 
                 val intent = Intent (this, SegundaTela::class.java )
@@ -72,7 +52,7 @@ class MainActivity : AppCompatActivity() {
                     putExtra("Result", tot)
                     putExtra("totalc", totalac)
                     putExtra("totalp", totalp)
-                    putExtra("tips", percentage)
+                    putExtra("tips", percen)
                     }
                 startActivity(intent)
             }

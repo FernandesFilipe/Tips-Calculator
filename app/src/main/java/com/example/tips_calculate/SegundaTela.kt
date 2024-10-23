@@ -21,17 +21,21 @@ class SegundaTela : AppCompatActivity() {
         val result = intent.getFloatExtra("Result", 0f)
         val totalaccount = intent.getFloatExtra("totalc", 0f)
         val totalp = intent.getFloatExtra("totalp", 0f)
-        val tipsp = intent.getIntExtra("tips", 0)
+        val tipsp = intent.getFloatExtra("tips", 0f)
 
 
         binding.tvTt.text = totalaccount.toString()
         binding.tvNump.text = totalp.toString()
         binding.tvPerc.text = tipsp.toString()
         binding.tvtotalamount.text = result.toString()
-        //val tv_result = findViewById<TextView>(R.id.tvresult)
-        //tv_result.text= result.toString()
 
 
+        binding.btnClean.setOnClickListener {
+            finish()
+
+
+
+        }
 
     }
 }

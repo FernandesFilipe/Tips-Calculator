@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="TextInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">#474040</item>
+    </style>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="button">#ba79f7</color>
+    <color name="buttonc">#75c0f4</color>
+    <color name="style">#82d7ff</color>
 </resources>
+
