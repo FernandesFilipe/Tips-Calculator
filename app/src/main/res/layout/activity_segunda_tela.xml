@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@drawable/cb"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SegundaTela">
@@ -13,9 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="28dp"
-        android:maxLength="6"
-        android:text="TextView"
+        android:layout_marginTop="40dp"
+        android:text="Total Amount:"
         android:textAlignment="center"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,13 +25,26 @@
         android:id="@+id/tvtotalamount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginStart="116dp"
-        android:text="TextView"
+        android:text="Result"
         android:textAlignment="center"
-        android:textSize="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Total whith Tips:"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvtips" />
 
     <TextView
         android:id="@+id/tvnpeople"
@@ -43,7 +56,7 @@
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvresult"
-        android:text="TextView" />
+        android:text="Total People:" />
 
     <TextView
         android:id="@+id/tvtips"
@@ -55,7 +68,7 @@
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvnpeople"
-        android:text="TextView" />
+        android:text="Total Percentage:" />
 
     <TextView
         android:id="@+id/tv_st"
@@ -63,8 +76,9 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
-        android:text="Check your account result be low"
-        android:textSize="30dp"
+        android:gravity="center"
+        android:text="Check your account result below:"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.85"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,20 +86,22 @@
 
     <TextView
         android:id="@+id/tv_t"
-        android:layout_marginHorizontal="20dp"
+        style="@style/Title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        style="@style/Title"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="130dp"
+        android:gravity="center"
         android:text="Summary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_tt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:text="TextView"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@+id/tv_st"
@@ -106,10 +122,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="TextView"
+        android:text="tv_percen"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@+id/tv_nump"
         app:layout_constraintTop_toBottomOf="@+id/tvnpeople" />
+
+    <Button
+        android:id="@+id/btn_clean"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="28dp"
+        android:text="Calculate again"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/buttonc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="30dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
