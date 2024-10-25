@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Appname">Calculador de gorjeta</string>
+    <string name="Tips">Gorjeta</string>
+    <string name="Tvsubtitle">Preencha os campos abaixo para realizar o cálculo </string>
+    <string name="Price">Ensira o valor da conta:</string>
+    <string name="Numberp">Ensira o número de pessoas:</string>
+    <string name="Tvpercentage">Ensira a porcentagem:</string>
+    <string name="Btncalculate">Calcular</string>
+
+    <string name="Summary">Resumo</string>
+    <string name="Tvst">Verifique o resultado abaixo:</string>
+    <string name="Tvresult">Total da conta:</string>
+    <string name="Tvnpeople">Total de pessoas:</string>
+    <string name="Tvtips">Total Porcentagem:</string>
+    <string name="TextView">Total com gorjeta:</string>
+    <string name="Tvtotalamount">Resultado</string>
+    <string name="Calculateagain">New calculo</string>
+
+</resources>
