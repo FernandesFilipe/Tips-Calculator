@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">Tips_Calculate</string>
+    <string name="Appname">Tips calculator</string>
+    <string name="Tips">Tips</string>
+    <string name="Tvsubtitle">Fill in the fields below to calculate your account</string>
+    <string name="Price">enter the bill amount</string>
+    <string name="Numberp">Enter the number of people</string>
+    <string name="Tvpercentage">Enter the percentage</string>
+    <string name="Btncalculate">Calculate</string>
+
+    <string name="Summary">Summary</string>
+    <string name="Tvst"> Check your account result below</string>
+    <string name="Tvresult">Total account</string>
+    <string name="Tvnpeople">Total of people</string>
+    <string name="Tvtips">Total percentage</string>
+    <string name="TextView">Total with tips</string>
+    <string name="Tvtotalamount">Result</string>
+    <string name="Calculateagain">Calculate again</string>
 </resources>
