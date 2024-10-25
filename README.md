@@ -14,6 +14,7 @@
 - Activity
 - Intent
 - Snackbar
+- Internacionalizando Strings
 - ViewGroup
   - ConstraintLayout
 - Views
